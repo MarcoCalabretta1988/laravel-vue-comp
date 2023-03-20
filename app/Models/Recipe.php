@@ -9,4 +9,5 @@ class Recipe extends Model
 {
     use HasFactory;
     protected $ingredients = ['ingredient' => 'array',];
+    protected $fillable = ['name', 'description', 'ingredient', 'number_of_person', 'time'];
 }

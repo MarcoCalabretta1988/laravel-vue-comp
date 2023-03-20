@@ -12,7 +12,24 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        //
+        // $status_filter = $request->query('status_filter');
+        // $category_filter = $request->query('category_filter');
+
+        // $query = Post::orderBy('updated_at', 'DESC');
+
+        // if ($status_filter) {
+        //     $value = $status_filter === 'published';
+        //     $query->where('is_published', $value);
+        // }
+
+        // if ($category_filter) {
+        //     $query->where('category_id', $category_filter);
+        // }
+
+        // $posts = $query->paginate(10);
+        // $categories = Category::all();
+
+        // return view('admin.posts.index', compact('posts',  'categories',  'status_filter', 'category_filter'));
     }
 
     /**
