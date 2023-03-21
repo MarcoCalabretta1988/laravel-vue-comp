@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Recipe;
 use Illuminate\Http\Request;
@@ -12,7 +12,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipes = Recipe::orderBy('updated_at', 'DESC');
+        $recipes = Recipe::orderBy('updated_at', 'DESC')->get();
 
         return view('admin.recipes.index', compact('recipes'));
     }

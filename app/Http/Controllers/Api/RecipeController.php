@@ -13,7 +13,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipes = Recipe::orderBy('updated_at', 'DESC');
+        $recipes = Recipe::orderBy('updated_at', 'DESC')->get();
 
         return response()->json($recipes);
     }

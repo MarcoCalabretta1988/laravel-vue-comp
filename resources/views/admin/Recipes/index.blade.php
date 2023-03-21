@@ -29,7 +29,12 @@
           <th scope="row">{{ $recipe->id }}</th>
           <td>{{ $recipe->name }}</td>
           <td>{{ $recipe->description}}</td>
-          <td>{{ $recipe->ingredient}}</td>
+          <td>
+
+          @foreach ($recipe->ingredient as $ingredient)
+              {{$ingredient}} ,
+          @endforeach
+          </td>
           <td>{{ $recipe->number_of_person}}</td>
           <td>{{ $recipe->time}}</td>
           <td>{{ $recipe->updated_at }}</td>
