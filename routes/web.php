@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Guest\HomeController as GuestHomeController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\Admin\RecipeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,4 +37,4 @@ Route::middleware('auth')->name('profile.')->prefix('/profile')->group(function 
     Route::delete('/', [ProfileController::class, 'destroy'])->name('destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
