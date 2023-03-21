@@ -41,10 +41,10 @@
           <td>
             <div class="d-flex justify-content-end align-items-center">
 
-              {{-- <a href="{{ route('admin.recipes.show', $recipe->id) }}" class="btn btn-sm btn-primary">
-                <i class="fas fa-eye"></i></a> --}}
+              <a href="{{ route('admin.recipes.show', $recipe->id) }}" class="btn btn-sm btn-primary">
+                <i class="fas fa-eye"></i></a>
 
-                {{-- <a href="{{ route('admin.recipes.edit', $recipe->id) }}" class="btn btn-sm btn-warning ms-2 text-white">
+                <a href="{{ route('admin.recipes.edit', $recipe->id) }}" class="btn btn-sm btn-warning ms-2 text-white">
                   <i class="fas fa-pencil"></i>
                 </a>
 
@@ -53,7 +53,7 @@
                   @csrf
                   @method('DELETE')
                   <button class="ms-2 btn btn-sm btn-danger" type="submit"><i class="fas fa-trash"></i></button>
-                </form> --}}
+                </form>
             </div>
           </td>
         </tr>
