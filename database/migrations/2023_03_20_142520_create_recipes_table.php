@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name', 50);
             $table->text('description');
             $table->json('ingredient');
-            $table->tinyInteger('number-of-person')->unsigned()->default(1);
+            $table->tinyInteger('number_of_person')->unsigned()->default(1);
             $table->time('time')->nullable();
             $table->timestamps();
         });
