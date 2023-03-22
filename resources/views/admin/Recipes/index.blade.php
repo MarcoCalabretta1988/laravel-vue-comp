@@ -5,9 +5,9 @@
 @section('content')
   <header class="d-flex align-items-center justify-content-between">
     <h1 class="my-5">Ricette</h1>
-    {{-- <a href="{{ route('admin.recipes.create') }}" class="btn btn-success ms-3">
+    <a href="{{ route('admin.recipes.create') }}" class="btn btn-success ms-3">
       <i class="fas fa-plus me-2"></i> Crea nuovo
-    </a> --}}
+    </a>
   </header>
 
   <table class="table table-light table-striped">
@@ -48,7 +48,7 @@
                   <i class="fas fa-pencil"></i>
                 </a>
 
-                <form method="recipe" action="{{ route('admin.recipes.destroy', $recipe->id) }}" class="delete-form"
+                <form method="POST" action="{{ route('admin.recipes.destroy', $recipe->id) }}" class="delete-form"
                   data-entity="recipe">
                   @csrf
                   @method('DELETE')
@@ -69,8 +69,8 @@
 
   {{-- Pagination --}}
   {{-- <div class="d-flex justify-content-end">
-    @if ($posts->hasPages())
-      {{ $posts->links() }}
+    @if ($recipes->hasPages())
+      {{ $recipes->links() }}
     @endif
   </div> --}}
 
