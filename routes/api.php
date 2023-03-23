@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\RecipeController;
+use App\Http\Controllers\Api\Recipe_suggestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 //rotte api recipes
 Route::apiResource('recipes', RecipeController::class);
+
+//rotte per articoli consigliati dagli utenti
+
+Route::post('/contact-message', [Recipe_suggestController::class, 'send']);
