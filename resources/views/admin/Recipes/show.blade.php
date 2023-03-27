@@ -8,7 +8,7 @@
   </header>
   <div class="clearfix">
     @if ($recipe->image)
-      <img class="me-2 img-fluid float-start" src="{{ asset('storage/' . $recipe->image) }}" alt="{{ $recipe->name }}">
+      <img class="me-2 img-fluid float-start me-5" width="400px" src="{{ asset('storage/' . $recipe->image) }}" alt="{{ $recipe->name }}">
     @endif
     <p>{{ $recipe->description }}</p>
     <ul>
